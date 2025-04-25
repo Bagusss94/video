@@ -1,0 +1,139 @@
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #333;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.close-button {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.iframe-wrapper iframe {
+  width: 120%;
+  height: 100%;
+  border: none;
+  position: relative;
+  left: -10%;
+}
+
+/* Grid responsif untuk video */
+#video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+/* Responsif modal player */
+#player-modal {
+  padding: 0 10px;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: 50vw;
+  max-height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.iframe-wrapper iframe {
+  width: 120%;
+  height: 100%;
+  position: relative;
+  left: -10%;
+}
+
+/* Judul responsif */
+#video-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Tombol close */
+#player-modal .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Gaya tambahan di HP */
+@media (max-width: 600px) {
+  #video-title {
+    font-size: 1rem;
+  }
+
+  .iframe-wrapper {
+    height: 55vw;
+  }
+}
