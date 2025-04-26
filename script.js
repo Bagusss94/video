@@ -10,11 +10,10 @@ function openModal(title, gdriveLink) {
 
   const playerContainer = document.getElementById("video-player");
   playerContainer.outerHTML = `
-      <div id="video-player" class="iframe-wrapper">
-        <iframe src="${iframeUrl}" frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen>
-        </iframe>
-      </div>
+      <iframe id="video-player" src="${iframeUrl}" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen
+        style="width:100%; height:400px; border-radius:10px;">
+      </iframe>
     `;
 
   document.getElementById("player-modal").classList.remove("hidden");
